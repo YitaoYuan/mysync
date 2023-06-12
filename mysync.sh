@@ -21,10 +21,12 @@ if [ -z $CUT_DIR ]; then
     exit 1
 fi 
 
+CUT_DIR=$(dirname $CUT_DIR)
+
 if [[ "$2" == *worker* ]]; then
-    REM_DIR=/home/yyt/
+    REM_DIR=/home/yyt$CUT_DIR # CUT_DIR starts with '/'
 else
-    REM_DIR=/root/yyt/
+    REM_DIR=/root/yyt$CUT_DIR
 fi
 
 set -x
