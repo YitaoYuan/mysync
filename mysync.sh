@@ -30,4 +30,4 @@ else
 fi
 
 set -x
-rsync --exclude "*/.*" --exclude ".*" -v -r $FILE $2:$REM_DIR
+rsync -l --exclude "*/.*" --exclude ".*" -v -r $FILE $2:$REM_DIR
